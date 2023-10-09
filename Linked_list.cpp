@@ -1,17 +1,18 @@
-#include <iostream> 
+#include "Linked_list.h"
 
 using namespace std; 
 
+void init_list(node **n){*n=NULL; }
 
-class node{
-    
-public:
-    int val; 
-    node *next;
-    
-};
-
-
+int get_lenght(node *n){
+    int len=0; 
+    node *aux= n; 
+    while(aux!=NULL){
+        len++; 
+        aux=aux->next; 
+    }
+    return len;         
+}
 
 void print_list(node *n){
     while(n!=NULL){
@@ -28,12 +29,6 @@ void insert_head(node **head, int newval){
 
     new_node->next= *head; 
     *head= new_node; 
-
-
-
-
-
-
     
 } 
 
@@ -65,16 +60,5 @@ void insert_next(node **head,int newval){
 
 
 
-int main(){
-    node *head= new node(); 
-    insert_next(&head,-1); 
-    insert_next(&head,20); 
-    insert_next(&head,10); 
-
-    print_list(head); 
  
 
-
-    
-
-}
