@@ -6,17 +6,19 @@ using namespace std;
 
 
 int main(){
-    node *list= new node(); 
+     node *list= new node(); 
     
     init_list(&list); 
     insert_head(&list, 5);
     insert_head(&list, 3); 
     insert_head(&list, 2); 
     insert_head(&list, 1); 
- 
+    
     print_list(list); 
- 
-
+    cout<<"------Reversed List-------"<<endl; 
+    
+    node *reversed =reverse(list); 
+    print_list(reversed);
 
     
 

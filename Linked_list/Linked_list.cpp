@@ -27,6 +27,7 @@ void insert_head(node **head, int newval){
     node *new_node= new node(); 
     new_node->val=newval; 
 
+    
     new_node->next= *head; 
     *head= new_node; 
     
@@ -58,7 +59,26 @@ void insert_next(node **head,int newval){
 
 }
 
+node * reverse(node *head){
+    node *temp= head; //actual node
+    node *n= NULL; //next node
+    node *p= NULL; //previous node
 
 
+    while (temp !=NULL)
+    {
+        n= temp->next; 
+        temp->next=p; 
+        p=temp; 
+        temp=n; 
+
+    }
+    head=p;    
+    
+    return head; 
+
+
+     
+}
  
 
