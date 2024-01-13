@@ -26,6 +26,8 @@ void init_table(types *t[]);
 void print_table(types *t[]);
 bool insert_table(types *new_type, types *t[]);
 unsigned int hash(const char *key); 
+bool search_table(char *s,types *t[]);
+
 
 
 
