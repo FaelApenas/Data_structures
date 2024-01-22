@@ -1,11 +1,11 @@
 #ifndef HASH_H 
 #define HASH_H
 
-
-#include<stdio.h>
+#include <stdio.h>
 #include<string.h>
 #include<stdlib.h> 
 #include<stdbool.h> 
+
 
 #define table_size 100000 
 #define NAME_MAX 100

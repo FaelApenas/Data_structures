@@ -4,8 +4,6 @@
 
 //types *primitives_table[table_size]; 
 
-
-
 int main(int argc, char**argv)
 {
 	init_table(primitives_table);
@@ -23,20 +21,15 @@ int main(int argc, char**argv)
 
 
 
-	char *in_table= search_table("Int64", primitives_table)? "true":"false"; 
-	printf("%s\n",in_table);
+	print_table(primitives_table);
 
 	return 0; 
 }
 
-
 void init_table(types *t[] )
 {
 	for(int i =0 ; i<table_size; i++ )
-	{
-		t[i]= NULL; 
-
-	}
+	{t[i]= NULL;}
 
 }
 
